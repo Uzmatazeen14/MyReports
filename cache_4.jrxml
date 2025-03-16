@@ -1,0 +1,107 @@
+<!-- Created with Jaspersoft Studio version 7.0.1.final using JasperReports Library version 7.0.1-573496633c2b4074e32f433154b543003f7d2498  -->
+<jasperReport name="cache_4" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="98c31d0a-4f75-4c41-8949-a2d926bfb8ed">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="mifos"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<dataset name="Dataset1" uuid="bbe8bbe3-b758-4df2-8f37-c72a7c681e57">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="mifos"/>
+		<query language="SQL"><![CDATA[SELECT * From  c_cache]]></query>
+		<field name="id" class="java.lang.Long">
+			<property name="com.jaspersoft.studio.field.name" value="id"/>
+			<property name="com.jaspersoft.studio.field.label" value="id"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="c_cache"/>
+		</field>
+		<field name="cache_type_enum" class="java.lang.Boolean">
+			<property name="com.jaspersoft.studio.field.name" value="cache_type_enum"/>
+			<property name="com.jaspersoft.studio.field.label" value="cache_type_enum"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="c_cache"/>
+		</field>
+	</dataset>
+	<query language="SQL"><![CDATA[SELECT *FROM c_cache;]]></query>
+	<field name="id" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.name" value="id"/>
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="c_cache"/>
+	</field>
+	<field name="cache_type_enum" class="java.lang.Boolean">
+		<property name="com.jaspersoft.studio.field.name" value="cache_type_enum"/>
+		<property name="com.jaspersoft.studio.field.label" value="cache_type_enum"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="c_cache"/>
+	</field>
+	<background splitType="Stretch"/>
+	<detail>
+		<band height="345" splitType="Stretch">
+			<element kind="component" uuid="0626d5f6-3858-4245-864b-963b436778ce" x="20" y="100" width="200" height="200">
+				<component kind="table">
+					<datasetRun uuid="bb7d64a7-314f-4347-beb7-a65ab8101864" subDataset="Dataset1">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<column kind="single" uuid="032f4ffb-edd9-4946-aa4b-3ba9401105aa" width="100">
+						<tableHeader height="30" style="Table_TH"/>
+						<tableFooter height="30" style="Table_TH"/>
+						<columnHeader height="30" style="Table_CH">
+							<element kind="staticText" uuid="d958da76-352e-4e1e-a3e1-0100e246a3f0" x="0" y="0" width="100" height="30">
+								<text><![CDATA[id]]></text>
+							</element>
+						</columnHeader>
+						<columnFooter height="30" style="Table_CH"/>
+						<detailCell height="30" style="Table_TD">
+							<element kind="textField" uuid="6f6c202a-4e17-4094-b1dd-72bbc9d7d618" x="0" y="0" width="100" height="30">
+								<expression><![CDATA[$F{id}]]></expression>
+							</element>
+						</detailCell>
+					</column>
+					<column kind="single" uuid="e749791a-44e3-42ab-b181-61f477f2dd4c" width="100">
+						<tableHeader height="30" style="Table_TH"/>
+						<tableFooter height="30" style="Table_TH"/>
+						<columnHeader height="30" style="Table_CH">
+							<element kind="staticText" uuid="cd59b8b3-d936-47ce-a079-be57e0b189e3" x="0" y="0" width="100" height="30">
+								<text><![CDATA[cache_type_enum]]></text>
+							</element>
+						</columnHeader>
+						<columnFooter height="30" style="Table_CH"/>
+						<detailCell height="30" style="Table_TD">
+							<element kind="textField" uuid="acc80b34-c331-41d8-b729-96a85051b1ea" x="0" y="0" width="100" height="30">
+								<expression><![CDATA[$F{cache_type_enum}]]></expression>
+							</element>
+						</detailCell>
+					</column>
+				</component>
+				<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+				<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+				<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+				<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+			</element>
+		</band>
+	</detail>
+	<columnFooter height="45" splitType="Stretch"/>
+	<pageFooter height="54" splitType="Stretch"/>
+	<summary height="42" splitType="Stretch"/>
+</jasperReport>
